@@ -41,7 +41,7 @@ var todoList={
     toggleAll: function(){
         var totalTodos=this.todos.length;
         var completedTodos=0;
-        for (var i; i< totalTodos; i++){
+        for (var i=0; i< totalTodos; i++){
             if (this.todos[i].completed === true){
                 completedTodos++;
             }
@@ -62,12 +62,12 @@ var todoList={
 };
 
 var displayTodosButton=document.getElementById('displayTodosButton');
-var toggleAllbutton=document.getElementById('toggleAllbutton');
+var toggleAllButton=document.getElementById('toggleAllButton');
 
 displayTodosButton.addEventListener('click', function(){
     todoList.displayTodos();
 });
 
-toggleAllbutton.addEventListener('click', function(){
+toggleAllButton.addEventListener('click', function(){
     todoList.toggleAll();
 });
