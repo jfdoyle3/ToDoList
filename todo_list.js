@@ -2,7 +2,7 @@
 //v7.0
 
 
-var todosList={
+var todoList={
     todos: [],
     displayTodos: function (){
         if (this.todos.length === 0){
@@ -12,8 +12,7 @@ var todosList={
         for(var i=0; i < this.todos.length; i++){
            if (this.todos[i].completed === true){
               console.log('(x)',this.todos[i].todoText);  
-           }
-                else {
+           }   else {
               console.log('( )',this.todos[i].todoText); 
             }
           }
@@ -61,3 +60,14 @@ var todosList={
     }
     
 };
+
+var displayTodosButton=document.getElementById('displayTodosButton');
+var toggleAllbutton=document.getElementById('toggleAllbutton');
+
+displayTodosButton.addEventListener('click', function(){
+    todoList.displayTodos();
+});
+
+toggleAllbutton.addEventListener('click', function(){
+    todoList.toggleAll();
+});
