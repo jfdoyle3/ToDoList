@@ -1,5 +1,5 @@
 
-//v6.0
+//v7.0
 
 
 var todosList={
@@ -15,14 +15,8 @@ var todosList={
            }
                 else {
               console.log('( )',this.todos[i].todoText); 
-          }
-              if (this.todos[i].completed === true){
-              console.log('(x)',this.todos[i].todoText);  
-           }
-                else {
-              console.log('( )',this.todos[i].todoText);
-                }
             }
+          }
         }
       },
     addTodo: function(todoText){
